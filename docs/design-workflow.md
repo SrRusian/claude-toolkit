@@ -1,6 +1,6 @@
-# How the pieces work together
+# Design workflow
 
-[← README](../README.md) · [Getting started](getting-started.md) · [design-kit](design-kit.md) · [dev-workflow](dev-workflow.md) · [Anthropic plugins](anthropic-plugins.md) · [Design tools](design-tools.md) · [Connectors & MCP](connectors-and-mcp.md) · [Workflow](workflow.md) · [Contributing](contributing.md)
+[← README](../README.md) · [Getting started](getting-started.md) · [design-kit](design-kit.md) · [dev-workflow](dev-workflow.md) · [Anthropic plugins](anthropic-plugins.md) · [Design tools](design-tools.md) · [Connectors & MCP](connectors-and-mcp.md) · [Design workflow](design-workflow.md) · [Contributing](contributing.md)
 
 ---
 
@@ -27,9 +27,13 @@ Typical frontend flow, with the tool for each step:
 7 Document      design:design-system, create-design-md, design:design-handoff
 ```
 
+Wrap every task, in any step, with `dev-workflow:task-closure`: understand first, verify for
+real, then close with a fixed report and a ready commit command (see
+[dev-workflow](dev-workflow.md)).
+
 Cross-cutting: `engineering:testing-strategy` for tests, `engineering:code-review` before merge,
 `engineering:architecture` for ADRs, `skill-creator` when authoring or tuning any skill here.
 
 ---
 
-[← README](../README.md) · [Getting started](getting-started.md) · [design-kit](design-kit.md) · [dev-workflow](dev-workflow.md) · [Anthropic plugins](anthropic-plugins.md) · [Design tools](design-tools.md) · [Connectors & MCP](connectors-and-mcp.md) · [Workflow](workflow.md) · [Contributing](contributing.md)
+[← README](../README.md) · [Getting started](getting-started.md) · [design-kit](design-kit.md) · [dev-workflow](dev-workflow.md) · [Anthropic plugins](anthropic-plugins.md) · [Design tools](design-tools.md) · [Connectors & MCP](connectors-and-mcp.md) · [Design workflow](design-workflow.md) · [Contributing](contributing.md)

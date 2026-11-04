@@ -1,6 +1,6 @@
 {
   "name": "dev-workflow",
   "description": "Working habits for any task that changes files: understand, do, verify, and close with a clear report and a ready commit command.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": { "name": "srrusian" }
 }

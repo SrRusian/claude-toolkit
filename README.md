@@ -39,7 +39,7 @@ Needs Claude Code, Node.js, Git and Python (`python` on Windows). More in
 | <img src="https://cdn.simpleicons.org/claude/D97757" width="20" height="20" alt="Claude" /> | [Anthropic plugins](docs/anthropic-plugins.md) | Engineering, Design, Skill Creator, Firebase, Playwright, LinkedIn |
 | <img src="https://cdn.simpleicons.org/figma/F24E1E" width="20" height="20" alt="Figma" /> | [Design tools](docs/design-tools.md) | Impeccable, UI/UX Pro Max, Playwright CLI and standalone UI skills |
 | <img src="https://cdn.simpleicons.org/modelcontextprotocol/5B8DEF" width="20" height="20" alt="MCP" /> | [Connectors and MCP](docs/connectors-and-mcp.md) | Enabled connectors, Firebase MCP, Android Studio MCP setup |
-| <img src="https://cdn.simpleicons.org/mermaid/FF3670" width="20" height="20" alt="Mermaid" /> | [Workflow](docs/workflow.md) | How the pieces work together, step by step |
+| <img src="https://cdn.simpleicons.org/mermaid/FF3670" width="20" height="20" alt="Mermaid" /> | [Design workflow](docs/design-workflow.md) | How the pieces work together, step by step |
 | <img src="https://cdn.simpleicons.org/git/F05032" width="20" height="20" alt="Git" /> | [Contributing](docs/contributing.md) | Adding a skill, licenses, maintenance |
 
 ## Catalog
@@ -60,7 +60,7 @@ Needs Claude Code, Node.js, Git and Python (`python` on Windows). More in
 | <img src="https://cdn.simpleicons.org/storybook/FF4785" width="20" height="20" alt="Storybook" /> | UI Skills set | UI Skills registry | Standalone skills | `npx ui-skills` | [docs](docs/design-tools.md#standalone-ui-skills) |
 | <img src="https://cdn.simpleicons.org/modelcontextprotocol/5B8DEF" width="20" height="20" alt="MCP" /> | Connectors (4) | Various | claude.ai connectors | claude.ai settings | [docs](docs/connectors-and-mcp.md#connectors) |
 
-## Workflow
+## Design workflow
 
 ```mermaid
 flowchart LR
@@ -71,7 +71,7 @@ flowchart LR
     E --> F["Document<br/>design-system, handoff"]
 ```
 
-Full detail in [Workflow](docs/workflow.md).
+Full detail in [Design workflow](docs/design-workflow.md).
 
 ## Layout
 
@@ -79,6 +79,8 @@ Full detail in [Workflow](docs/workflow.md).
 .claude-plugin/marketplace.json   Plugin list (installs with /plugin install)
 plugins/<plugin>/                 My plugins: skills, references, assets, NOTICE.md
 docs/                             Detailed guides linked above
+scripts/check.py                  Repository self-check (also runs in CI)
+.github/workflows/check.yml       Runs the self-check on every push and pull request
 ```
 
 ## Licenses

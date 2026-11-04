@@ -50,6 +50,7 @@ State an exception in one line in the code or PR; never skip a rule silently.
   `className` is allowed for layout placement only.
 - **P-8** A polymorphic `as` prop is allowed only on text and box primitives, and the element type
   is constrained.
+- **P-9** Every prop is typed; no implicit `any`; export the prop types.
 
 ## S. State and data
 
@@ -74,6 +75,7 @@ State an exception in one line in the code or PR; never skip a rule silently.
   `prefers-reduced-motion`.
 - **T-8** Z-index values come from a token scale; no ad hoc `9999`.
 - **T-9** Nothing essential is revealed only on hover.
+- **T-10** Write styles mobile-first and enhance with `min-width` queries.
 
 ## A. Accessibility
 

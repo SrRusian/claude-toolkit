@@ -1,12 +1,12 @@
 ---
 name: atomic-design
-description: Use when structuring or decomposing any frontend UI into reusable components, regardless of framework. Applies Brad Frost's atomic design methodology — atoms, molecules, organisms, templates, and pages — to guide consistent component hierarchy, naming, and composition decisions. Also use when building or extending a component library or design system.
+description: Use when structuring or decomposing any frontend UI into reusable components, regardless of framework. Applies Brad Frost's atomic design methodology (atoms, molecules, organisms, templates, and pages) to guide consistent component hierarchy, naming, and composition decisions. Also use when building or extending a component library or design system.
 ---
 
-# Atomic Design — Component Hierarchy Methodology
+# Atomic Design: Component Hierarchy Methodology
 
 Atomic design is a mental model for breaking any user interface into five distinct levels of
-structural complexity — atoms, molecules, organisms, templates, and pages — borrowed from
+structural complexity (atoms, molecules, organisms, templates, and pages), borrowed from
 chemistry's atoms-to-matter progression. It gives teams a shared vocabulary for talking about UI
 structure and a repeatable way to decide "does this need to be its own piece, and how big should
 that piece be?" The methodology itself is **framework-agnostic**: it describes how to think about
@@ -19,43 +19,43 @@ components nobody reuses, others get duplicated because nobody realized a smalle
 already existed, and naming drifts (is this a "card," a "widget," a "block"?). Atomic design solves
 three recurring problems:
 
-- **Consistency** — the same five labels describe every piece of UI, so a design system and its
+- **Consistency**: the same five labels describe every piece of UI, so a design system and its
   implementation stay aligned no matter who's talking about it.
-- **Reuse** — decomposing top-down into smaller named levels surfaces the shared building blocks
+- **Reuse**: decomposing top-down into smaller named levels surfaces the shared building blocks
   (a label, a button) that would otherwise get re-created inside every larger piece that needs one.
-- **Scalable vocabulary** — "this is a molecule, not an organism" is a fast, unambiguous design
+- **Scalable vocabulary**: "this is a molecule, not an organism" is a fast, unambiguous design
   conversation once the levels are understood, replacing long back-and-forth about scope.
 
-The levels are a thinking tool, not a rigid folder structure to enforce everywhere — use them to
+The levels are a thinking tool, not a rigid folder structure to enforce everywhere. Use them to
 reason about granularity, not as a law that every project must nest five matching directories.
 
 ## The five levels (overview)
 
-1. **Atoms** — the smallest indivisible UI building blocks: a label, a single input field, a single
+1. **Atoms**: the smallest indivisible UI building blocks: a label, a single input field, a single
    control. An atom has no meaningful sub-parts; splitting it further removes function rather than
    simplifying it.
-2. **Molecules** — a small group of atoms bonded together to do one thing, such as a labelled input
+2. **Molecules**: a small group of atoms bonded together to do one thing, such as a labelled input
    paired with a submit control. A grouping becomes a molecule once two or more atoms combine for a
    single, reusable purpose.
-3. **Organisms** — relatively complex groups of molecules and/or atoms that form a distinct,
+3. **Organisms**: relatively complex groups of molecules and/or atoms that form a distinct,
    recognisable section of an interface, such as a page header or a grid of item summaries. A
    grouping becomes an organism once it reads as a standalone region rather than a helper piece.
-4. **Templates** — page-level layout skeletons that arrange organisms into a structure using
+4. **Templates**: page-level layout skeletons that arrange organisms into a structure using
    placeholder content. Templates are about arrangement, not real content.
-5. **Pages** — specific instances of a template populated with real, representative content. Pages
+5. **Pages**: specific instances of a template populated with real, representative content. Pages
    are the concrete end state used to validate that the whole system actually works with real data.
 
-See [references/hierarchy.md](references/hierarchy.md) for the expanded per-level guidance —
+See [references/hierarchy.md](references/hierarchy.md) for the expanded per-level guidance:
 definitions, boundary rules, and additional neutral examples for each level.
 
 ## How to apply it (decomposition workflow)
 
 Follow this ordered procedure to decompose an arbitrary UI description into the five levels:
 
-1. **Start from the whole screen.** Identify the page as the top-level unit — the thing a user
+1. **Start from the whole screen.** Identify the page as the top-level unit, the thing a user
    actually sees, with real content.
 2. **Strip content to find the template.** Mentally replace the real content with placeholders.
-   What's left — the arrangement of regions — is the template.
+   What's left, the arrangement of regions, is the template.
 3. **Identify the distinct regions inside the template.** Each standalone, recognisable section
    (a header, a listing area, a footer) is a candidate organism.
 4. **Break each organism into its functional groupings.** Look for clusters of elements that work
@@ -67,7 +67,7 @@ Follow this ordered procedure to decompose an arbitrary UI description into the 
    discussing the design, the content, or the composition.
 
 This procedure works top-down (screen → page → template → organism → molecule → atom) or
-bottom-up (start cataloguing atoms first, then group them upward) — pick whichever direction
+bottom-up (start cataloguing atoms first, then group them upward). Pick whichever direction
 matches how much of the UI already exists versus is being designed fresh.
 
 ## Decision heuristics / boundaries
@@ -86,51 +86,40 @@ matches how much of the UI already exists versus is being designed fresh.
 
 ## Common pitfalls / anti-patterns
 
-- **Over-nesting organisms** — wrapping every organism inside another organism "for organization"
+- **Over-nesting organisms**: wrapping every organism inside another organism "for organization"
   defeats the purpose of a flat, recognisable set of regions; keep organism nesting shallow.
-- **Treating pages as templates** — a template must stay free of real content; once specific
+- **Treating pages as templates**: a template must stay free of real content; once specific
   content is baked in, it has become a page, not a reusable template.
-- **Framework leakage** — the five levels describe structural complexity, not implementation
+- **Framework leakage**: the five levels describe structural complexity, not implementation
   detail; don't let a specific rendering technology's constraints redefine what counts as an atom
   or an organism.
-- **Skipping levels** — jumping straight from atoms to organisms (skipping molecules) usually
+- **Skipping levels**: jumping straight from atoms to organisms (skipping molecules) usually
   hides a reusable grouping that other organisms could have shared.
 
-## Professional rules (apply when writing code)
+## Core rules
 
-These rules turn the methodology into consistent implementation. Skip any that conflict with the
-project's existing conventions; the project's own design system always wins.
+Short version of [references/rules.md](references/rules.md), which holds the full numbered list
+(N, D, P, S, T, A, R, Q) and the definition of done. The project's own design system and
+conventions always win; accessibility outranks pixel fidelity.
 
-### Component design
+- **Levels:** classify at the smallest correct level. Imports flow downward only: page, template,
+  organism, molecule, atom, tokens.
+- **Props:** describe content and behavior (`variant`, `size`, `disabled`, `onClick`, `children`),
+  never looks (`color`, `fontSize`). Extend native element attributes and forward the ref.
+- **Tokens:** components read semantic tokens only, never primitives or hardcoded values. If the
+  design source differs from the tokens, update the tokens first, then the component.
+- **States:** every interactive component covers default, hover, focus-visible, active, disabled,
+  loading and invalid.
+- **Accessibility:** semantic HTML first, an accessible name for every control, visible focus,
+  keyboard operable, contrast of at least 4.5:1 for body text.
+- **Responsive:** mobile-first, verified at 375, 768 and 1440px.
+- **Quality:** typed props, tests, and a story or example per variant, with files co-located.
 
-- **Single responsibility.** One component, one job. Atoms stay pure: no business logic, little or
-  no state, well-typed props.
-- **Composition over inheritance.** Build larger pieces by composing smaller ones; avoid prop
-  drilling by passing children or using context.
-- **Props describe content and behavior, not looks.** Expose `variant`, `size`, `disabled`,
-  `onClick`, `children`. Do not expose raw `color`, `fontSize` or `backgroundColor` props.
-- **Styles live inside the component** (CSS Modules, scoped styles or the project's equivalent) and
-  read from tokens.
-- **Organisms may own state and data fetching**, but should stay reusable; molecules stay
-  self-contained and expose a small API.
+### Breaking the hierarchy
 
-### Design tokens
-
-- Use **semantic tokens** (`--color-primary`, `--spacing-component-padding`), never primitives
-  (`--blue-500`) or hardcoded values (`#3B82F6`, `16px`) inside components.
-- When a design source (Figma, a style guide) differs from the existing tokens, update the tokens
-  first, then the component. Never round or "improve" values the design specifies.
-- Record where values came from (a link or node id in a short comment) so they can be re-verified.
-
-### Quality baseline
-
-- **Accessibility is part of the component**: semantic elements first, then ARIA only where needed
-  (`aria-label` for icon-only controls, `aria-invalid` / `aria-describedby` for field errors,
-  `aria-busy` for loading), visible focus states, keyboard operability.
-- **Responsive by default**: mobile-first styles, enhanced at tablet and desktop breakpoints.
-- **TypeScript interfaces** for every component's props; no implicit `any`.
-- **Co-locate** component, styles, tests and stories; add a barrel `index.ts` per component or per
-  level.
+Acceptable cases: a page uses an atom directly for a trivial case; a molecule sits straight inside
+a template when an organism would add nothing; shared hooks and utilities live outside the
+hierarchy. Document the exception in one line instead of silently skipping a level.
 
 ### Suggested layout (adapt to the project)
 
@@ -139,24 +128,6 @@ src/components/
   atoms/Button/{Button.tsx, Button.module.css, Button.test.tsx, Button.stories.tsx, index.ts}
   molecules/  organisms/  templates/  pages/
 ```
-
-### When breaking the hierarchy is acceptable
-
-- A page may use an atom directly for a trivial case.
-- A molecule may be used straight inside a template when an organism would add nothing.
-- Shared hooks and utilities live outside the hierarchy.
-
-Document the exception in one line instead of silently skipping a level.
-
-### Delivery checklist
-
-- [ ] Classified at the correct level, with the smallest level preferred
-- [ ] Only semantic tokens, no hardcoded values
-- [ ] Props are content and behavior only
-- [ ] Accessible (semantics, labels, focus, keyboard)
-- [ ] Responsive at the project's breakpoints
-- [ ] Props typed; tests added or updated
-- [ ] Design source linked when one exists
 
 For composing full pages from existing components, use the **atomic-page-builder** skill.
 

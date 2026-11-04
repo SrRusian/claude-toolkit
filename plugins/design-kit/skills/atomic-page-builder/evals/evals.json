@@ -1,0 +1,46 @@
+{
+  "skill_name": "atomic-page-builder",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Build the analytics dashboard page. The project already has DashboardLayout, Card and DataTable, but the design also shows an ActivityFeed organism that does not exist yet.",
+      "expected_output": "Composes the page only from existing components, identifies ActivityFeed as a gap, stops instead of inventing it, and hands off to the atomic-design skill with the gap listed.",
+      "assertions": [
+        "Inventories the existing components before building",
+        "Reports ActivityFeed as a missing organism",
+        "Does not create a new organism inside the page file",
+        "Hands off to atomic-design for the missing component"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Compose the settings page. The design uses a 22px gap between sections but the token scale only has 16px and 24px.",
+      "expected_output": "Does not round 22px to 24px and does not hardcode 22px in the page; it flags the missing token and routes the token change through atomic-design before continuing.",
+      "assertions": [
+        "Refuses to round the value to a nearby token",
+        "Does not hardcode 22px in the page styles",
+        "Requests a new token through atomic-design first"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Create the pricing page quickly, you can pull in a UI library like Material UI for the cards and use #333 for the text color.",
+      "expected_output": "Declines the external UI library and the hardcoded color, imports cards from the project's own design system, and uses semantic tokens for color.",
+      "assertions": [
+        "Does not add an external UI library the project does not use",
+        "Uses a semantic token instead of #333",
+        "Imports components from the design system"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Build the users list page. The data may be empty or fail to load.",
+      "expected_output": "Handles loading, empty, error and success states, sets one h1 and the document title, and verifies the page in a browser at mobile, tablet and desktop widths in light and dark themes.",
+      "assertions": [
+        "Implements loading, empty and error states",
+        "Uses a single h1 and sets the page title",
+        "Plans browser verification at several widths and both themes"
+      ]
+    }
+  ]
+}
