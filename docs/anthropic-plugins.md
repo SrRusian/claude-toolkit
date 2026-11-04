@@ -1,6 +1,6 @@
 # Anthropic plugins
 
-[← README](../README.md) · [Getting started](getting-started.md) · [design-kit](design-kit.md) · [Anthropic plugins](anthropic-plugins.md) · [Design tools](design-tools.md) · [Connectors & MCP](connectors-and-mcp.md) · [Workflow](workflow.md) · [Contributing](contributing.md)
+[← README](../README.md) · [Getting started](getting-started.md) · [design-kit](design-kit.md) · [dev-workflow](dev-workflow.md) · [Anthropic plugins](anthropic-plugins.md) · [Design tools](design-tools.md) · [Connectors & MCP](connectors-and-mcp.md) · [Workflow](workflow.md) · [Contributing](contributing.md)
 
 ---
 
@@ -10,7 +10,7 @@ Connectors.
 
 ## Engineering (v1.2.0, 10 skills)
 
-Install: [claude.com](https://claude.com/es/marketplace/plugins/engineering) ·
+Install: [claude.com](https://claude.com/marketplace/plugins/engineering) ·
 [claude.ai](https://claude.ai/customize/plugins/id/2da0c8d9-1e96-4394-b0f4-3249613186f8%40anthropic-plugin-directory)
 
 | Skill | Does |
@@ -31,7 +31,7 @@ with `testing-strategy` for component tests.
 
 ## Design (v1.2.0, 7 skills)
 
-Install: [claude.com](https://claude.com/es/marketplace/plugins/design) ·
+Install: [claude.com](https://claude.com/marketplace/plugins/design) ·
 [claude.ai](https://claude.ai/customize/plugins/id/afe29730-8d0c-470c-801a-a52a510c0510%40anthropic-plugin-directory)
 
 | Skill | Does |
@@ -49,7 +49,7 @@ Links: `design-system` documents what `atomic-design` produces; `design-handoff`
 
 ## Skill Creator
 
-Install: [claude.com](https://claude.com/es/marketplace/plugins/skill-creator) ·
+Install: [claude.com](https://claude.com/marketplace/plugins/skill-creator) ·
 [claude.ai](https://claude.ai/customize/plugins/id/4af84cf1-fa7f-46f0-afd6-5de390facaf2%40anthropic-plugin-directory)
 
 Creates, edits and evaluates skills: runs evals, benchmarks with variance analysis and optimizes
@@ -58,12 +58,12 @@ the `description` for better triggering. Use it on every new skill in this repo.
 ## Firebase (MCP server)
 
 Maintained by Google; details and install commands are in [MCP servers](connectors-and-mcp.md#mcp-servers). Also listed
-in the claude.ai directory: [claude.com](https://claude.com/es/marketplace/plugins/firebase) ·
+in the claude.ai directory: [claude.com](https://claude.com/marketplace/plugins/firebase) ·
 [claude.ai](https://claude.ai/customize/plugins/id/585936f9-ceab-4a4c-b868-6eec587e14b6%40anthropic-plugin-directory).
 
 ## Playwright (MCP server)
 
-Install: [claude.com](https://claude.com/es/marketplace/plugins/playwright) ·
+Install: [claude.com](https://claude.com/marketplace/plugins/playwright) ·
 [claude.ai](https://claude.ai/customize/plugins/id/22bf1341-d051-4d92-9363-8d0dc8349035%40anthropic-plugin-directory)
 
 Browser automation as MCP tools (navigate, click, type, snapshot, screenshot, console, network,
@@ -78,4 +78,4 @@ private link. It does not connect to LinkedIn; you paste the profile text.
 
 ---
 
-[← README](../README.md) · [Getting started](getting-started.md) · [design-kit](design-kit.md) · [Anthropic plugins](anthropic-plugins.md) · [Design tools](design-tools.md) · [Connectors & MCP](connectors-and-mcp.md) · [Workflow](workflow.md) · [Contributing](contributing.md)
+[← README](../README.md) · [Getting started](getting-started.md) · [design-kit](design-kit.md) · [dev-workflow](dev-workflow.md) · [Anthropic plugins](anthropic-plugins.md) · [Design tools](design-tools.md) · [Connectors & MCP](connectors-and-mcp.md) · [Workflow](workflow.md) · [Contributing](contributing.md)

@@ -1,12 +1,21 @@
 {
   "name": "claude-toolkit",
-  "owner": { "name": "srrusian" },
-  "metadata": { "description": "Personal Claude skills grouped by domain as plugins." },
+  "owner": {
+    "name": "srrusian"
+  },
+  "metadata": {
+    "description": "Claude skills grouped by domain as installable plugins."
+  },
   "plugins": [
     {
       "name": "design-kit",
       "source": "./plugins/design-kit",
       "description": "Frontend component architecture: atomic design and page composition."
+    },
+    {
+      "name": "dev-workflow",
+      "source": "./plugins/dev-workflow",
+      "description": "Working habits: verify for real, close tasks with a clear report and a ready commit command."
     }
   ]
 }

@@ -23,6 +23,7 @@
 ```
 /plugin marketplace add <path-or-github-user>/claude-toolkit
 /plugin install design-kit@claude-toolkit
+/plugin install dev-workflow@claude-toolkit
 ```
 
 Needs Claude Code, Node.js, Git and Python (`python` on Windows). More in
@@ -34,6 +35,7 @@ Needs Claude Code, Node.js, Git and Python (`python` on Windows). More in
 |:-:|---|---|
 | <img src="https://cdn.simpleicons.org/gnubash/4EAA25" width="20" height="20" alt="Shell" /> | [Getting started](docs/getting-started.md) | Requirements, install, repository layout |
 | <img src="https://cdn.simpleicons.org/react/61DAFB" width="20" height="20" alt="React" /> | [design-kit](docs/design-kit.md) | My plugin: `atomic-design` and `atomic-page-builder`, files, rules, sources |
+| <img src="https://cdn.simpleicons.org/linear/5E6AD2" width="20" height="20" alt="Task workflow" /> | [dev-workflow](docs/dev-workflow.md) | My plugin: `task-closure`, verify-for-real habits and the ready commit command |
 | <img src="https://cdn.simpleicons.org/claude/D97757" width="20" height="20" alt="Claude" /> | [Anthropic plugins](docs/anthropic-plugins.md) | Engineering, Design, Skill Creator, Firebase, Playwright, LinkedIn |
 | <img src="https://cdn.simpleicons.org/figma/F24E1E" width="20" height="20" alt="Figma" /> | [Design tools](docs/design-tools.md) | Impeccable, UI/UX Pro Max, Playwright CLI and standalone UI skills |
 | <img src="https://cdn.simpleicons.org/modelcontextprotocol/5B8DEF" width="20" height="20" alt="MCP" /> | [Connectors and MCP](docs/connectors-and-mcp.md) | Enabled connectors, Firebase MCP, Android Studio MCP setup |
@@ -45,6 +47,7 @@ Needs Claude Code, Node.js, Git and Python (`python` on Windows). More in
 | | Item | Origin | Kind | Install | Details |
 |:-:|---|---|---|---|---|
 | <img src="https://cdn.simpleicons.org/react/61DAFB" width="20" height="20" alt="React" /> | **design-kit** | Own (MIT / AID sources) | Plugin, 2 skills | This marketplace | [docs](docs/design-kit.md) |
+| <img src="https://cdn.simpleicons.org/linear/5E6AD2" width="20" height="20" alt="Task workflow" /> | **dev-workflow** | Own | Plugin, 1 skill | This marketplace | [docs](docs/dev-workflow.md) |
 | <img src="https://cdn.simpleicons.org/claude/D97757" width="20" height="20" alt="Claude" /> | Engineering | Anthropic | Plugin, 10 skills | claude.ai directory | [docs](docs/anthropic-plugins.md#engineering-v120-10-skills) |
 | <img src="https://cdn.simpleicons.org/claude/D97757" width="20" height="20" alt="Claude" /> | Design | Anthropic | Plugin, 7 skills | claude.ai directory | [docs](docs/anthropic-plugins.md#design-v120-7-skills) |
 | <img src="https://cdn.simpleicons.org/claude/D97757" width="20" height="20" alt="Claude" /> | Skill Creator | Anthropic | Plugin, 1 skill | claude.ai directory | [docs](docs/anthropic-plugins.md#skill-creator) |

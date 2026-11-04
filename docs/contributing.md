@@ -1,6 +1,6 @@
 # Contributing and maintenance
 
-[← README](../README.md) · [Getting started](getting-started.md) · [design-kit](design-kit.md) · [Anthropic plugins](anthropic-plugins.md) · [Design tools](design-tools.md) · [Connectors & MCP](connectors-and-mcp.md) · [Workflow](workflow.md) · [Contributing](contributing.md)
+[← README](../README.md) · [Getting started](getting-started.md) · [design-kit](design-kit.md) · [dev-workflow](dev-workflow.md) · [Anthropic plugins](anthropic-plugins.md) · [Design tools](design-tools.md) · [Connectors & MCP](connectors-and-mcp.md) · [Workflow](workflow.md) · [Contributing](contributing.md)
 
 ---
 
@@ -16,6 +16,11 @@
 5. Evaluate it with `skill-creator`, run `claude plugin validate .`, bump the plugin version, and
    update this README.
 
+## Language
+
+All text in this repository is in English: skills (including folder and `name` values), docs,
+comments, plugin descriptions and commit messages. Skill names are English kebab-case.
+
 ## Maintenance
 
 - After changing a plugin here: `claude plugin validate .`, then `/plugin update design-kit` (or
@@ -25,4 +30,4 @@
 
 ---
 
-[← README](../README.md) · [Getting started](getting-started.md) · [design-kit](design-kit.md) · [Anthropic plugins](anthropic-plugins.md) · [Design tools](design-tools.md) · [Connectors & MCP](connectors-and-mcp.md) · [Workflow](workflow.md) · [Contributing](contributing.md)
+[← README](../README.md) · [Getting started](getting-started.md) · [design-kit](design-kit.md) · [dev-workflow](dev-workflow.md) · [Anthropic plugins](anthropic-plugins.md) · [Design tools](design-tools.md) · [Connectors & MCP](connectors-and-mcp.md) · [Workflow](workflow.md) · [Contributing](contributing.md)
