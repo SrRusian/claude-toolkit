@@ -1,31 +1,13 @@
-# Secrets and local config
+# Secrets
 .env
 .env.*
-!.env.example
 *.pem
 *.key
-settings.local.json
-.claude/settings.local.json
 credentials*.json
-*token*
+settings.local.json
 
-# Claude Code local state
-.claude/*
-!.claude/skills/
-
-# OS
+# Local state
+.claude/
+node_modules/
 .DS_Store
 Thumbs.db
-desktop.ini
-
-# Editors
-.vscode/*
-!.vscode/extensions.json
-.idea/
-
-# Dependencies and build
-node_modules/
-__pycache__/
-*.pyc
-dist/
-*.log

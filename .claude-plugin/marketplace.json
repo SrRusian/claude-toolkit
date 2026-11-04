@@ -1,0 +1,12 @@
+{
+  "name": "claude-toolkit",
+  "owner": { "name": "srrusian" },
+  "metadata": { "description": "Personal Claude skills grouped by domain as plugins." },
+  "plugins": [
+    {
+      "name": "design-kit",
+      "source": "./plugins/design-kit",
+      "description": "Frontend component architecture: atomic design and page composition."
+    }
+  ]
+}
