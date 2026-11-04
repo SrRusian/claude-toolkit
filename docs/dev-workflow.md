@@ -65,9 +65,8 @@ git commit -m "Add Plugin Catalog Docs" -m "- split the README into guides" -m "
 
 ## Installation note
 
-An earlier personal version of this skill, named `cierre-de-tarea`, may still exist in
-`~/.claude/skills/`. It overlaps with this plugin and is in Spanish, so remove it after installing
-the plugin (PowerShell: `Remove-Item -Recurse -Force "$HOME\.claude\skills\cierre-de-tarea"`).
+If a standalone copy of this skill exists in `~/.claude/skills/` (for example an older version),
+remove it after installing the plugin so the skill is not loaded twice.
 
 ---
 

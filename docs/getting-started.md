@@ -19,7 +19,7 @@ Then install the upstream pieces from the sections below. Requirements: Node.js 
 ## Repository layout
 
 ```
-.claude-plugin/marketplace.json      Lists my plugins (so they install with /plugin install)
+.claude-plugin/marketplace.json      Lists the plugins (so they install with /plugin install)
 plugins/<plugin>/
   .claude-plugin/plugin.json         Name, description, version
   NOTICE.md                          Sources and licenses of anything derived
@@ -31,7 +31,7 @@ plugins/<plugin>/
 README.md                            This catalog
 ```
 
-Rules: a skill is copied here only when I customize it; everything else is installed from its
+Rules: a skill is copied here only when it is customized; everything else is installed from its
 upstream so it keeps updating. Skill folder name = `name` in frontmatter (kebab-case).
 `description` starts with "Use when..." because it decides when Claude activates the skill. No
 secrets in the repo.

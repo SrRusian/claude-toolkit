@@ -32,7 +32,7 @@ Requires Node.js and npm. It runs locally and uses the Firebase CLI credentials 
 Default Credentials); the `firebase_login` tool signs in or checks status.
 
 ```
-# Option 1 (recommended, what I use): plugin
+# Option 1 (recommended): plugin
 claude plugin marketplace add firebase/firebase-tools
 claude plugin install firebase@firebase
 

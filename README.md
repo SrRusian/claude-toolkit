@@ -2,7 +2,7 @@
 
 # claude-toolkit
 
-**Control center for my Claude setup: own skills, plugins, connectors and MCP servers, versioned and documented.**
+**Control center for a Claude setup: own skills, plugins, connectors and MCP servers, versioned and documented.**
 
 ![Claude Code](https://img.shields.io/badge/Claude_Code-plugin_marketplace-D97757?style=flat-square&logo=claude&logoColor=white)
 ![MCP](https://img.shields.io/badge/MCP-documented-5B8DEF?style=flat-square&logo=modelcontextprotocol&logoColor=white)
@@ -14,7 +14,7 @@
 ## Overview
 
 - **Own skills**, grouped by domain as Claude Code plugins and installable from this repo.
-- **A catalog of everything else** I use (Anthropic plugins, third-party tools, connectors, MCP
+- **A catalog of everything else** in use (Anthropic plugins, third-party tools, connectors, MCP
   servers): what each does, how to install it and what it pairs with.
 - **One place to audit** the setup, so nothing is duplicated, forgotten or out of date.
 
@@ -34,8 +34,8 @@ Needs Claude Code, Node.js, Git and Python (`python` on Windows). More in
 | | Guide | What you will find |
 |:-:|---|---|
 | <img src="https://cdn.simpleicons.org/gnubash/4EAA25" width="20" height="20" alt="Shell" /> | [Getting started](docs/getting-started.md) | Requirements, install, repository layout |
-| <img src="https://cdn.simpleicons.org/react/61DAFB" width="20" height="20" alt="React" /> | [design-kit](docs/design-kit.md) | My plugin: `atomic-design` and `atomic-page-builder`, files, rules, sources |
-| <img src="https://cdn.simpleicons.org/linear/5E6AD2" width="20" height="20" alt="Task workflow" /> | [dev-workflow](docs/dev-workflow.md) | My plugin: `task-closure`, verify-for-real habits and the ready commit command |
+| <img src="https://cdn.simpleicons.org/react/61DAFB" width="20" height="20" alt="React" /> | [design-kit](docs/design-kit.md) | Plugin: `atomic-design` and `atomic-page-builder`, files, rules, sources |
+| <img src="https://cdn.simpleicons.org/linear/5E6AD2" width="20" height="20" alt="Task workflow" /> | [dev-workflow](docs/dev-workflow.md) | Plugin: `task-closure`, verify-for-real habits and the ready commit command |
 | <img src="https://cdn.simpleicons.org/claude/D97757" width="20" height="20" alt="Claude" /> | [Anthropic plugins](docs/anthropic-plugins.md) | Engineering, Design, Skill Creator, Firebase, Playwright, LinkedIn |
 | <img src="https://cdn.simpleicons.org/figma/F24E1E" width="20" height="20" alt="Figma" /> | [Design tools](docs/design-tools.md) | Impeccable, UI/UX Pro Max, Playwright CLI and standalone UI skills |
 | <img src="https://cdn.simpleicons.org/modelcontextprotocol/5B8DEF" width="20" height="20" alt="MCP" /> | [Connectors and MCP](docs/connectors-and-mcp.md) | Enabled connectors, Firebase MCP, Android Studio MCP setup |
@@ -77,7 +77,7 @@ Full detail in [Design workflow](docs/design-workflow.md).
 
 ```
 .claude-plugin/marketplace.json   Plugin list (installs with /plugin install)
-plugins/<plugin>/                 My plugins: skills, references, assets, NOTICE.md
+plugins/<plugin>/                 Plugins: skills, references, assets, NOTICE.md
 docs/                             Detailed guides linked above
 scripts/check.py                  Repository self-check (also runs in CI)
 .github/workflows/check.yml       Runs the self-check on every push and pull request
